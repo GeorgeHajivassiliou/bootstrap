@@ -1,6 +1,19 @@
-{{ define "main" }}
-  {{ partial "home/masthead" . }}
-  {{ partial "home/masthead-followup" . }}
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "header" . }}
+  </head>
+  <body>
+    {{ partial "skippy" . }}
 
-  {{ .Content }}
-{{ end }}
+    {{ partial "docs-navbar" . }}
+
+    {{ partial "home/masthead" . }}
+    {{ partial "home/masthead-followup" . }}
+
+    {{ .Content }}
+
+    {{ partial "footer" . }}
+    {{ partial "scripts" . }}
+  </body>
+</html>
